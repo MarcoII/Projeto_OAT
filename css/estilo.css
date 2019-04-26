@@ -1,0 +1,22 @@
+#div1 h1, #div2 h1{
+	color: blue;
+}
+
+table td, th{
+	border: 1px solid;
+}
+
+.menu{
+	list-style-type: none;
+	float: right;
+}
+
+.menu li{
+	margin: 10px;
+	float: left;
+}
+
+#rodape{
+	margin-top: 50px;
+	text-align: center;	
+}
