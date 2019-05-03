@@ -20,3 +20,7 @@ table td, th{
 	margin-top: 50px;
 	text-align: center;	
 }
+
+#cabecalho h1 {
+	text-align: center;
+}
