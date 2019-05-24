@@ -1,5 +1,12 @@
 <?php
 
+require_once("sql/conexao_bd.php");
+
+?>
+
+
+<?php
+
 if(isset($_GET["pg"])){
 	$pagina = $_GET["pg"];
 }
@@ -9,7 +16,11 @@ else{
 
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html><?php
+
+require_once("sql/conexao_bd.php");
+
+?>
 <html>
 	<head>
 		<title>Chaveiro Boa Ventura</title>
@@ -66,7 +77,7 @@ else{
 					<li><a class="btn btn-primary" role="button" href="?pg=sobre">Sobre</a></li>
 					<li><a class="btn btn-primary" role="button" href="?pg=cadastro">Cadastro</a></li>
 					<li><a class="btn btn-primary" role="button" href="?pg=localizacao">Localização</a></li>
-					<li><a class="btn btn-primary" role="button" href="?pg=listagem">Localização</a></li>
+					<li><a class="btn btn-primary" role="button" href="?pg=listagem">Listagem</a></li>
 				</ul>
 
 			</div>
