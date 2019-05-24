@@ -27,7 +27,11 @@ $query = mysqli_query($link, $sql);
 
 // echo "</table>";
 
-echo "<table>";
+echo "<table class='table table-bordered table-dark'>";
+echo "<tr>";
+echo "<th>Email</th>";
+echo "<th>Senha</th>";
+echo "</tr>";
 
 while($row = mysqli_fetch_assoc($query)){
 
@@ -37,6 +41,7 @@ while($row = mysqli_fetch_assoc($query)){
 		<td><?= $row["email"] ?></td>
 		<td><?= $row["senha"] ?></td>
 	</tr>
+
 	
 
 
