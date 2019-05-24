@@ -66,6 +66,7 @@ else{
 					<li><a class="btn btn-primary" role="button" href="?pg=sobre">Sobre</a></li>
 					<li><a class="btn btn-primary" role="button" href="?pg=cadastro">Cadastro</a></li>
 					<li><a class="btn btn-primary" role="button" href="?pg=localizacao">Localização</a></li>
+					<li><a class="btn btn-primary" role="button" href="?pg=listagem">Localização</a></li>
 				</ul>
 
 			</div>
