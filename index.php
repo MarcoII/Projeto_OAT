@@ -78,6 +78,7 @@ require_once("sql/conexao_bd.php");
 					<li><a class="btn btn-primary" role="button" href="?pg=cadastro">Cadastro</a></li>
 					<li><a class="btn btn-primary" role="button" href="?pg=localizacao">Localização</a></li>
 					<li><a class="btn btn-primary" role="button" href="?pg=listagem">Listagem</a></li>
+
 				</ul>
 
 			</div>
@@ -96,6 +97,8 @@ require_once("sql/conexao_bd.php");
 			    	echo '<li class="breadcrumb-item" aria-current="page"><a href="?pg=cadastro">Cadastro</a></li>'; 
 			    } elseif ($pagina == "localizacao") {
 			    	echo '<li class="breadcrumb-item" aria-current="page"><a href="?pg=localizacao">Localização</a></li>';
+			    }elseif ($pagina == "listagem") {
+			    	echo '<li class="breadcrumb-item" aria-current="page"><a href="?pg=listagem">Listagem</a></li>';
 			    }
 			    ?>
 			  </ol>

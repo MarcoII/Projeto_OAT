@@ -1,3 +1,29 @@
+<?php
+
+$actionEditar = "";
+$id = 0;
+$nome = NULL;
+$email = NULL;
+
+
+if (isset($_GET["editar"])) {
+	$id = $_GET["editar"];
+	$sql = "SELECT * FROM usuarios WHERE id = $id";
+	$query = mysqli_query($link, $sql);
+	if($row = mysqli_fetch_assoc($query)){
+		$nome = $row["nome"];
+		$email = $row["email"];
+		
+	}
+	else{
+		echo "Falha ao carregar registro!";
+	}
+	$actionEditar = "&editar=$id";
+}
+
+?>
+
+
 <h2>Cadastro</h2>
 
 
@@ -7,21 +33,20 @@
 
 
 
-		<form action="?pg=processar" method="POST">
+		<form action="?pg=processar<?= $actionEditar ?>" method="POST">
+		<div class="form-group">
+		    <label for="inputNome">Nome</label>
+		    <input type="text" class="form-control" id="inputNome" name="nome" aria-describedby="emailHelp" placeholder="Digite seu nome" value="<?= $nome ?>">		    
+		 </div>
 		  <div class="form-group">
-		    <label for="exampleInputEmail1">Endereço de email</label>
-		    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Seu email">
-		    <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+		    <label for="exampleInputEmail1">Email</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Digite seu e-mail" value="<?= $email ?>">		    
 		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputPassword1">Senha</label>
-		    <input type="password" class="form-control" name="senha" id="exampleInputPassword1" placeholder="Senha">
-		  </div>
-		  <div class="form-group form-check">
 		  <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 
+	<div class="col-md-3"> </div>
 </div>
-<div class="col-md-3"> </div>
+
 
 
