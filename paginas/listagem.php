@@ -1,22 +1,5 @@
 <?php
 
-
-if (isset($_GET["excluir"])) {
-	$id = $_GET["excluir"];
-	$sql = "DELETE FROM usuarios WHERE id = $id";
-	$query = mysqli_query($link, $sql);
-	if ($query === TRUE){
-	echo '<div class="alert alert-success" role="alert">
-  		Excluído com sucesso!
-	</div>';	
-	}
-else{
-	echo '<div class="alert alert-danger" role="alert">
-  		Falhou a exclusão!
-	</div>';
-	}
-}
-
 $sql = "SELECT * FROM usuarios";
 
 $query = mysqli_query($link, $sql);
@@ -43,12 +26,16 @@ $query = mysqli_query($link, $sql);
 // }
 
 // echo "</table>";
-
+echo "<h1>Lista de Cadastros</h1>";
 echo "<table class='table table-bordered table-dark'>";
 echo "<tr>";
 echo "<th>ID</th>";
 echo "<th>Nome</th>";
 echo "<th>Email</th>";
+echo "<th>Endereço</th>";
+echo "<th>Telefone</th>";
+echo "<th>Dia</th>";
+echo "<th>Horário</th>";
 echo "</tr>";
 
 while($row = mysqli_fetch_assoc($query)){
@@ -67,20 +54,20 @@ while($row = mysqli_fetch_assoc($query)){
 		<td>			
 			<?= $row["email"] ?>
 		</td>
-		<td>
-			<a 
-			href="?pg=cadastro&editar=<?= $row["id"] ?>"
-			>
-				Editar
-			</a>
+		<td>			
+			<?= $row["endereco"] ?>
 		</td>
-		<td>
-			<a 
-			href="?pg=listagem&excluir=<?= $row["id"] ?>"
-			>
-				Excluir
-			</a>
+		<td>			
+			<?= $row["telefone"] ?>
 		</td>
+		<td>			
+			<?= $row["dia"] ?>
+		</td>
+		<td>			
+			<?= $row["horario"] ?>
+		</td>
+
+		
 </tr>
 
 	
@@ -94,4 +81,5 @@ echo "</table>"
 
 ?>
 
-<p>Lista de Cadastros</p>
+<button type="button" class="btn btn-lg btn-block btn-outline-primary"><a href="?pg=sessao&logout=1">Sair</a></button>
+

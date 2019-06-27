@@ -83,7 +83,7 @@ else{
 				<ul class="menu">
 					<li><a class="btn btn-primary" role="button" href="?ph=inicio">Início</a></li>
 					<li><a class="btn btn-primary" role="button" href="?pg=sobre">Sobre</a></li>
-					<li><a class="btn btn-primary" role="button" href="?pg=cadastro">Agendamento</a></li>
+					<li><a class="btn btn-primary" role="button" href="?pg=cadastro">Cadastro</a></li>
 					<li><a class="btn btn-primary" role="button" href="?pg=localizacao">Localização</a></li>
 					<li><a class="btn btn-primary" role="button" href="?pg=confirmacao">Sessao</a></li>
 

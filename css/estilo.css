@@ -24,3 +24,7 @@ table td, th{
 #cabecalho h1 {
 	text-align: center;
 }
+
+p{
+	text-align: justify; 
+}

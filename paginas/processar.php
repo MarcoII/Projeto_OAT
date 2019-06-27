@@ -1,15 +1,18 @@
 <?php
-
+$id = 0;
 $nome = $_POST["nome"];
 $email = $_POST["email"];
+$endereco = $_POST["endereco"];
+$telefone = $_POST["telefone"];
+$dia = $_POST["dia"];
+$horario = $_POST["horario"];
 
 
-if(isset($_GET["editar"]) && $_GET["editar"] != 0){
-	$id = $_GET["editar"];
-	$sql = "UPDATE usuarios SET nome='$nome', email='$email' WHERE id = $id";
+if($id = 0){
+	echo "Tente novamente";
 }
 else{
-	$sql = "INSERT INTO usuarios (nome, email) VALUES ('$nome', '$email')";
+	$sql = "INSERT INTO usuarios (nome, email, endereco, telefone, dia, horario) VALUES ('$nome', '$email', '$endereco', '$telefone', '$dia', '$horario')";
 }
 
 $query = mysqli_query($link, $sql);
