@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST["nome"]) && isset($_POST["senha"])) {
-	$nome = "Marco";
-	$senha = "123";
+	$nome = "administrador";
+	$senha = "Ch@v31r0";
 	
 	$sql = "SELECT * FROM adm WHERE nome = '$nome' AND senha = '$senha'";
 	$query = mysqli_query($link, $sql);
